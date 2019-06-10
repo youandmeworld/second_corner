@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html>
 <title>W3.CSS Template</title>
@@ -16,6 +17,104 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Futura", sans-serif}
   background-size: cover; width:85%;
   background-image: url('11-01.jpg');
   min-height: 100%;
+}
+
+$background-color: #FFFFF;
+$headline-color: #F08965;
+*{
+  box-sizing: border-box;
+}
+body{
+  font-family: 'FUTURA', sans-serif;
+  background: $background-color;
+}
+header.header{
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  transform: translateY(-50%);
+  h1{
+    font-size: 8rem;
+    color: $headline-color;
+    text-align: center;
+    margin-top: 0;
+    text-transform: uppercase;
+    font-weight: 900;
+  }
+}
+.glitch-window{
+  position: absolute;
+  top: 0;
+  left: -2px;
+  width: 100%;
+  color: $headline-color;
+  text-shadow: 2px 0 $background-color, -1px 0 yellow, -2px 0 green;
+  overflow: hidden;
+  animation: crt-me 2500ms infinite linear alternate-reverse;
+  // background: red;
+}
+
+//Animation Keyframes
+@keyframes crt-me {
+   0% {
+        clip: rect(31px, 9999px, 94px, 0)
+    }
+    10% {
+        clip: rect(112px, 9999px, 76px, 0)
+    }
+    20% {
+        clip: rect(85px, 9999px, 77px, 0)
+    }
+    30% {
+        clip: rect(27px, 9999px, 97px, 0)
+    }
+    40% {
+        clip: rect(64px, 9999px, 98px, 0)
+    }
+    50% {
+        clip: rect(61px, 9999px, 85px, 0)
+    }
+    60% {
+        clip: rect(99px, 9999px, 114px, 0)
+    }
+    70% {
+        clip: rect(34px, 9999px, 115px, 0)
+    }
+    80% {
+        clip: rect(98px, 9999px, 129px, 0)
+    }
+    90% {
+        clip: rect(43px, 9999px, 96px, 0)
+    }
+    100% {
+        clip: rect(82px, 9999px, 64px, 0)
+    }
+    
+}
+
+
+
+//Inspiration Button
+.inspiration-button{
+  font-family: Helvetica, sans-serif;
+  position: fixed;
+  display: inline-block;
+  z-index: 100;
+  bottom: 1rem;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  color: white;
+  text-decoration: none;
+  padding: 0.75rem 1rem;
+  border-radius: 80px;
+  background: linear-gradient(270deg,#1e80dc,#c61590);
+  //From Instagram...thanks
+  transition: transform 250ms ease;
+  &:hover, &:focus, &:active{
+    transform: translate(-50%, -10%);
+
+  }
 }
 </style>
 <body>
@@ -45,8 +144,18 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Futura", sans-serif}
   <span class="w3-button w3-top w3-white w3-xxlarge w3-text-grey w3-hover-text-black" style="width:auto;right:0;" onclick="openNav()"><i class="fa fa-bars"></i></span>
 
   <!-- Header -->
+  <header class="header">
+  <h1 class="glitched">SECOND CORNER</h1>
+</header>
+
+
+
+
+
+
+
   <header class="w3-container w3-center" style="padding:128px 16px" id="home">
-    <h1 class="w3-jumbo" style=" background-color: #F08965; color: white"><b>Second Corner</b></h1>
+    <h1 class="w3-jumbo" style=" color: #F08965"><b>Second Corner</b></h1>
     <p>Bugers . Fries . Drinks </p>
     <img src="/w3images/profile_girl.jpg" class="w3-image w3-hide-large w3-hide-small w3-round" style="display:block;width:60%;margin:auto;">
     <img src="/w3images/profile_girl.jpg" class="w3-image w3-hide-large w3-hide-medium w3-round" width="1000" height="1333">
@@ -156,6 +265,49 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Futura", sans-serif}
         </ul>
       </div>
 
+         <div class="w3-half w3-margin-bottom">
+        <ul class="w3-ul w3-center w3-card w3-hover-shadow">
+          <li class="w3-dark-grey w3-xlarge w3-padding-32">Basic</li>
+          <li class="w3-padding-16">Web Design</li>
+          <li class="w3-padding-16">Photography</li>
+          <li class="w3-padding-16">5GB Storage</li>
+          <li class="w3-padding-16">Mail Support</li>
+          <li class="w3-padding-16">
+            <h2>$ 10</h2>
+            <span class="w3-opacity">per month</span>
+          </li>
+          <li class="w3-light-grey w3-padding-24">
+            <button class="w3-button w3-white w3-padding-large w3-hover-black">Sign Up</button>
+          </li>
+        </ul>
+      </div>
+
+
+       <div class="w3-half w3-margin-bottom">
+        <ul class="w3-ul w3-center w3-card w3-hover-shadow">
+          <li class="w3-dark-grey w3-xlarge w3-padding-32">Basic</li>
+          <li class="w3-padding-16">Web Design</li>
+          <li class="w3-padding-16">Photography</li>
+          <li class="w3-padding-16">5GB Storage</li>
+          <li class="w3-padding-16">Mail Support</li>
+          <li class="w3-padding-16">
+            <h2>$ 10</h2>
+            <span class="w3-opacity">per month</span>
+          </li>
+          <li class="w3-light-grey w3-padding-24">
+            <button class="w3-button w3-white w3-padding-large w3-hover-black">Sign Up</button>
+          </li>
+        </ul>
+      </div>
+
+
+
+
+
+
+
+
+
       <div class="w3-half">
         <ul class="w3-ul w3-center w3-card w3-hover-shadow">
           <li class="w3-black w3-xlarge w3-padding-32">Pro</li>
@@ -229,6 +381,9 @@ function openNav() {
 function closeNav() {
   document.getElementById("mySidebar").style.display = "none";
 }
+$("header").append("<div class='glitch-window'></div>");
+//fill div with clone of real header
+$( "h1.glitched" ).clone().appendTo( ".glitch-window" );
 </script>
 
 </body>
